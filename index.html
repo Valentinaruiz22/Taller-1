@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario Sena V1 - Registro de Datos</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header>
+        <h1>FORMULARIO SENA V1🐈</h1>
+        <p class="slogan">¡GRACIAS POR DEJAR SUS DATOS!</p>
+    </header>
+    <main>
+        <section class="centrar-formulario">
+            <form id="formularioPeliculas">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required minlength="3" placeholder="Ej: Valentina Ruiz" pattern="[A-Za-zÁÉÍÓÚáéíóúÑñ ]{3,40}">
+
+                <label for="gmail">Correo Gmail:</label>
+                <input type="email" id="gmail" name="gmail" required placeholder="Ej: valentina@gmail.com" pattern="[a-zA-Z0-9._%+-]+@gmail\\.com$">
+
+                <label for="edad">Edad:</label>
+                <input type="number" id="edad" name="edad" min="10" max="120" required placeholder="Ej: 25">
+
+                <label>¿Te gusta ver películas?</label>
+                <div class="opciones-radio">
+                    <label><input type="radio" name="gustaPeliculas" value="si" required> Sí</label>
+                    <label><input type="radio" name="gustaPeliculas" value="no"> No</label>
+                    <label><input type="radio" name="gustaPeliculas" value="tal vez"> Tal vez</label>
+                </div>
+
+                <label for="generoFavorito">¿Cuál es tu género de película favorito?</label>
+                <select id="generoFavorito" name="generoFavorito" required>
+                    <option value="">Elige una opción</option>
+                    <option value="accion">Acción</option>
+                    <option value="comedia">Comedia</option>
+                    <option value="drama">Drama</option>
+                    <option value="terror">Terror</option>
+                    <option value="animadas">Animadas</option>
+                    <option value="ciencia ficcion">Ciencia Ficción</option>
+                    <option value="romance">Romance</option>
+                    <option value="documental">Documental</option>
+                </select>
+
+                <label>¿Qué plataformas usas para ver películas?</label>
+                <div class="opciones-checkbox">
+                    <label><input type="checkbox" name="plataformas[]" value="netflix"> Netflix</label>
+                    <label><input type="checkbox" name="plataformas[]" value="disney+"> Disney+</label>
+                    <label><input type="checkbox" name="plataformas[]" value="prime"> Prime Video</label>
+                    <label><input type="checkbox" name="plataformas[]" value="hbo"> HBO Max</label>
+                    <label><input type="checkbox" name="plataformas[]" value="cine"> Cine</label>
+                    <label><input type="checkbox" name="plataformas[]" value="otra"> Otra</label>
+                </div>
+
+                <label for="peliculaReciente">¿Cuál fue la última película que viste?</label>
+                <input type="text" id="peliculaReciente" name="peliculaReciente" required placeholder="Ej: Intensamente 2">
+
+                <label for="sugerencia">¿Alguna sugerencia o comentario sobre películas?</label>
+                <textarea id="sugerencia" name="sugerencia" rows="3" placeholder="Escribe aquí tu comentario..."></textarea>
+
+                <div class="botones-form">
+                    <input type="submit" value="Enviar">
+                    <input type="reset" value="Limpiar">
+                </div>
+            </form>
+        </section>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
